@@ -13,7 +13,7 @@ Our mandate is to:
   
 ## Project Structure
 This repository contains the core components of the analysis:
--  [Ad-Hoc SQL Analysis](https://github.com/Manvithtech07/Bharat-herald-media-analysis-Codebasics-Resume-Project-Challenge/tree/main/SQL-BusinessRequirements) 
+-  [Ad-Hoc SQL Analysis](https://github.com/Manvithtech07/Bharat-herald-media-analysis-Codebasics-Resume-Project-Challenge/tree/main/SQL-BusinessRequirements): Contains answers to all six business requirement queries (ad-hoc-requests.pdf)
 
 - Power BI Dashboard
 - Final Presentation
