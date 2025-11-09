@@ -1,0 +1,111 @@
+This document provides metadata descriptions for the following tables:
+
+fact_print_sales
+
+fact_ad_revenue
+
+fact_digital_pilot
+
+fact_city_readiness
+
+dim_city
+
+dim_ad_category
+
+✅ fact_print_sales
+Purpose:
+Captures monthly print performance of Bharat Herald across cities. Tracks how many copies were printed, sold, and finally circulated—essential for evaluating print demand and operational efficiency.
+
+Columns:
+
+city: Edition or city name (e.g., Bhopal, Lucknow).
+
+month: Month of record (format: YYYY-MM).
+
+copies_printed: Total number of newspapers printed.
+
+copies_sold: Number of printed copies sold (including kiosk and vendor sales).
+
+net_circulation: Copies actually circulated after accounting for returns.
+
+✅ fact_ad_revenue
+Purpose:
+Tracks quarterly ad revenues by city and category. Useful for analyzing ad market trends, city-level engagement by advertisers, and category-level ad investments over time.
+
+Columns:
+
+edition: City/region edition (e.g., Delhi, Kanpur).
+
+quarter: Quarter of record (e.g., 2022-Q1, Q4-2023).
+
+ad_category: Type of advertiser (e.g., FMCG, Education, Government).
+
+currency: Currency format used (may vary, needs normalization).
+
+ad_revenue_in_inr: Standardized revenue in Indian Rupees (INR).
+
+✅ fact_digital_pilot
+Purpose:
+Details Bharat Herald’s short-lived digital pilot during 2021. Helps evaluate the feasibility, cost, and impact of digital transformation efforts.
+
+Columns:
+
+platform: Platform type (e.g., Mobile App Beta, WhatsApp PDF).
+
+launch_month: Month of launch (e.g., Mar-2021, 2021-03).
+
+dev_cost: Cost of digital product development (INR).
+
+marketing_cost: Budget spent on promotion (INR).
+
+users_reached: Number of users reached via campaigns.
+
+downloads_or_accesses: Number of actual users who accessed the pilot.
+
+avg_bounce_rate: Percentage of users who quickly exited.
+
+cumulative_feedback_from_customers: Aggregated feedback (qualitative, often missing).
+
+✅ fact_city_readiness
+Purpose:
+Provides dynamic, time-based readiness scores for each city using three factors—literacy rate, smartphone penetration, and internet penetration. Important for modeling digital adoption potential across regions.
+
+Columns:
+
+city_id: Foreign key to dim_city.
+
+month: Monthly granularity (format: YYYY-MM).
+
+literacy_rate: Percentage of literate population.
+
+smartphone_penetration: Estimated % with smartphone access.
+
+internet_penetration: Estimated % with internet access.
+
+✅ dim_city
+Purpose:
+Lookup table for all cities in Bharat Herald’s operational scope. Used to link other fact tables, classify cities by tier, and perform location-based segmentation.
+
+Columns:
+
+city_id: Unique identifier for each city.
+
+city: City name.
+
+state: State in which the city resides.
+
+tier: Tier classification (e.g., Tier 1, Tier 2, Tier 3).
+
+✅ dim_ad_category
+Purpose:
+Normalizes inconsistent ad category entries from fact_ad_revenue. Also maps categories to sector groups and brand examples to enrich ad analysis.
+
+Columns:
+
+raw_ad_category: Raw input label from ad revenue data.
+
+standard_ad_category: Cleaned and standardized category.
+
+category_group: Broader sector grouping (e.g., Public Sector, Commercial Brands).
+
+example_brands: Sample advertisers under the category.

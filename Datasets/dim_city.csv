@@ -1,0 +1,11 @@
+city_id,city,state,tier
+C001,Lucknow,Uttar Pradesh,Tier 2
+C002,Delhi,Delhi,Tier 1
+C003,Bhopal,Madhya Pradesh,Tier 2
+C004,Patna,Bihar,Tier 2
+C005,Jaipur,Rajasthan,Tier 2
+C006,Mumbai,Maharastra,Tier 1
+C007,Ranchi,Jharkhand,Tier 3
+C008,Kanpur,Uttar Pradesh,Tier 2
+C009,Ahmedabad,Gujarat,Tier 1
+C010,Varanasi,Uttar Pradesh,Tier 2
