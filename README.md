@@ -31,5 +31,7 @@ This repository contains the core components of the analysis:
 - DAX  
 - Git and GitHub
 
-  <img width="1142" height="644" alt="Q1_Print_Circulation_Trends" src="https://github.com/user-attachments/assets/809218a5-6389-4f44-a33b-baa3d7fed8de" />
+---
+
+<img width="1142" height="644" alt="Q1_Print_Circulation_Trends" src="https://github.com/user-attachments/assets/809218a5-6389-4f44-a33b-baa3d7fed8de" />
 
